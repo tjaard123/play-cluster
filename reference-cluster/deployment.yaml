@@ -1,19 +1,20 @@
 apiVersion: apps/v1 # Kubernetes API version
 kind: Deployment
 metadata:
-  name: tjaard123-deployment
+  name: hello-world-deployment
+  namespace: hello-world
 spec:
   selector:
     matchLabels:
-      app: tjaard123
-  replicas: 2 # tells deployment to run 2 pods matching the template
+      app: hello-world
+  replicas: 1 # tells deployment to run n pods matching the template
   template:
     metadata:
       labels:
-        app: tjaard123
+        app: hello-world
     spec:
       containers:
-      - name: tjaard123
+      - name: hello-world
         image: tjaard123/hello-world:1.0
         ports:
         - containerPort: 80
