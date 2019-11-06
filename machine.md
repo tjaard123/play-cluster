@@ -14,11 +14,19 @@ Shell <> terminal, a terminal is a program that runs the shell. A emulator.  Win
 
 - [Get Windows terminal](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab)
 
+## AWS
+
 ## `kubectl`
+
+## `~/.kube/config`
+
+## `eksctl`
 
 ## `kubectx` & `kubens`
 
 ## `stern`
+
+## `helm`
 
 ## Zsh
 
@@ -36,7 +44,17 @@ I also use [this](https://github.com/zsh-users/zsh-autosuggestions) for auto sug
 
 ![auto-complete.png](auto-complete.png)
 
+## Docker on Windows
+
+Can be a little tricky. Docker runs on Windows, not inside WSL. You install the docker client on WSL and then point it to the daemon running on Windows.
+
+## Line endings
+
+Ouch!
+
 ## Folder structure
+
+There are some important folders for Kubernetes on Linux:
 
 ```sh
 ~ /.ssh
@@ -45,6 +63,11 @@ I also use [this](https://github.com/zsh-users/zsh-autosuggestions) for auto sug
     - config
 ~ /.aws
     - credentials
+~ usr/local/bin
+    - kubectl
+    - kubens
+    - kubectx
+    - helm
 ```
 
 ## 6. Tricks
