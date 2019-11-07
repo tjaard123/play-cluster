@@ -68,7 +68,7 @@ aws s3 ls --profile company # Company root account in eu-west-1
 aws s3 ls --pfofile client-at-company # Assume role through company root account to client account 111175111141 and list S3 buckets in eu-west-1
 ```
 
-## `kubectl`
+## kubectl
 
 Just follow the guide?  https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
@@ -92,17 +92,17 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
 chmod +x /usr/local/bin/kubectl
 ```
 
-## `~/.kube/config`
+## ~/.kube/config
 
 Just like the AWS CLI (and probably all CLI's), it stores a config in your user directory with access credentials to all your clusters.  A cool tip is to do a `git init` inside `~/.kube` to track changes you make by adding more clusters. There are plenty of ways to setup your config, we'll use AWS CLI for EKS.
 
-## `eksctl`
+## eksctl
 
 There are many ways to spin up a cluster, currently I've settled on https://eksctl.io/, a CLI to create & maintain a cluster on EKS.
 
 Download it, you'll see it works the same way as `kubectl`
 
-## `kubectx` & `kubens`
+## kubectx & kubens
 
 When you're Kubernetes'ing, you need to switch to different clusters and namespaces. You could do this:
 
@@ -122,7 +122,7 @@ $ kubectx cluster-1
 $ kubens production
 ```
 
-## `stern`
+## stern
 
 You can use `kubectl logs POD` to see the logs of a pod. But if you have 10 pods with your API running, you won't know which of the 10 handles a request you want to debug.  [Stern](https://github.com/wercker/stern) allows you to quickly log all pods with a SQL LIKE feel:
 
@@ -137,7 +137,7 @@ $ kubectl logs my-api-234aoe8
 $ stern my-api
 ```
 
-## `helm`
+## helm
 
 Coming soon...
 
