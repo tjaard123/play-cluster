@@ -94,7 +94,56 @@ chmod +x /usr/local/bin/kubectl
 
 ## ~/.kube/config
 
-Just like the AWS CLI (and probably all CLI's), it stores a config in your user directory with access credentials to all your clusters.  A cool tip is to do a `git init` inside `~/.kube` to track changes you make by adding more clusters. There are plenty of ways to setup your config, we'll use AWS CLI for EKS.
+Just like the AWS CLI (and probably all CLI's), it stores a config in your user directory with access credentials to all your clusters.  A cool tip is to do a `git init` inside `~/.kube` to track changes you make by adding more clusters. There are plenty of ways to setup your config, we'll use AWS CLI for EKS:
+
+To setup your `~/.kube/config` to connect to an AWS cluster:
+
+```sh
+$ aws eks --profile <AWS_PROFILE> --region eu-west-1 update-kubeconfig --name <CLUSTER_NAME>
+```
+
+## Zsh
+
+This is optional but... The ultimate ninja uses Z shell and https://ohmyz.sh/
+
+I use the [Lambda gitster](https://github.com/ergenekonyigit/lambda-gitster) theme, with my favourite feature being the current working directory showing the root of the git repo when you cd into a git repo.
+
+![lambda-gitster.png](lambda-gitster.png)
+
+## Command History
+
+This is your number one skill.  CTRL + R is your friend, you search through commands you've already run. My whole brain is stored in my linux shell history.
+
+I also use [this](https://github.com/zsh-users/zsh-autosuggestions) for auto suggestions based on history:
+
+![auto-complete.png](auto-complete.png)
+
+## Docker on Windows
+
+Can be a little tricky. Docker runs on Windows, not inside WSL. You install the docker client on WSL and then point it to the daemon running on Windows.
+
+https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
+
+## Folder structure
+
+There are some important folders for Kubernetes on Linux:
+
+```sh
+~/.ssh
+    - id_rsa # SSH'ing into stuff, this is where your key is
+~/.kube
+    - config # kubectl config
+~/.aws # AWS CLI
+    - config
+    - credentials
+/usr/local/bin # Where you store your binaries
+    - kubectl
+    - kubens
+    - kubectx
+    - helm
+```
+
+# Non-core tools
 
 ## eksctl
 
@@ -140,51 +189,6 @@ $ stern my-api
 ## helm
 
 Coming soon...
-
-## Zsh
-
-This is optional but... The ultimate ninja uses Z shell and https://ohmyz.sh/
-
-I use the [Lambda gitster](https://github.com/ergenekonyigit/lambda-gitster) theme, with my favourite feature being the current working directory showing the root of the git repo when you cd into a git repo.
-
-![lambda-gitster.png](lambda-gitster.png)
-
-## Command History
-
-This is your number one skill.  CTRL + R is your friend, you search through commands you've already run. My whole brain is stored in my linux shell history.
-
-I also use [this](https://github.com/zsh-users/zsh-autosuggestions) for auto suggestions based on history:
-
-![auto-complete.png](auto-complete.png)
-
-## Docker on Windows
-
-Can be a little tricky. Docker runs on Windows, not inside WSL. You install the docker client on WSL and then point it to the daemon running on Windows.
-
-https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
-
-## Line endings
-
-Ouch!
-
-## Folder structure
-
-There are some important folders for Kubernetes on Linux:
-
-```sh
-~/.ssh
-    - id_rsa # SSH'ing into stuff, this is where your key is
-~/.kube
-    - config # kubectl config
-~/.aws # AWS CLI
-    - config
-    - credentials
-/usr/local/bin # Where you store your binaries
-    - kubectl
-    - kubens
-    - kubectx
-    - helm
-```
 
 ## Terminal editors
 
