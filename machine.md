@@ -1,6 +1,6 @@
 # Kubernetes Ninja
 
-How to setup a ninja environment for kubernetes, specifically a cluster running on AWS EKS. This guide is intended to take noobs from zero to ninja.
+How to setup a ninja environment for kubernetes, specifically a cluster running on AWS EKS. This guide is intended to take noobs from zero to ninja, specifically using Windows as your OS.
 
 ## Linux shell
 
