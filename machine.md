@@ -1,6 +1,11 @@
-# Kubernetes Ninja
+# Kubernetes / WSL Ninja
 
-How to setup a ninja environment for kubernetes, specifically a cluster running on AWS EKS. This guide is intended to take noobs from zero to ninja, specifically using Windows as your OS.
+How to setup a ninja Linux terminal for kubernetes, specifically a cluster running on AWS EKS. This guide is intended to take noobs from zero to ninja, specifically using Windows as your OS.
+
+References:
+- [Scott's intro to WSL](https://www.youtube.com/watchv=A0eqZujVfYU)
+- [Terminal preview](https://www.youtube.com/watch?v=NfgAOxfv0QU)
+- [Switch panes](https://docs.microsoft.com/en-us/windows/terminal/panes#switching-between-panes)
 
 ## Linux shell
 
